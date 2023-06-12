@@ -12,18 +12,10 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Let Types Enum Class
-*
-*	Class for the different let types.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class LetTypes extends ValuesBase {
-
-	const LongTerm = 1;
-	const ShortTerm = 2;
-	const Commercial = 4;
-	const NotSpecified = 0;
+enum LetTypes : int
+{
+    case LongTerm = 1;
+    case ShortTerm = 2;
+    case Commercial = 4;
+    case NotSpecified = 0;
 }

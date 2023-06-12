@@ -38,9 +38,5 @@ class GetBrandEmails extends RequestBase {
 	/**
 	*	@var array $arrSynthesize The synthesize array.
 	*/
-	protected $arrSynthesize = array(
-		'network' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\Network', 'required' => true),
-		'brand' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\Brand', 'required' => true),
-		'export_period' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\ExportPeriodTime', 'required' => true)
-	);
+	protected $arrSynthesize = ['network' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\Network::class, 'required' => true], 'brand' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\Brand::class, 'required' => true], 'export_period' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\ExportPeriodTime::class, 'required' => true]];
 }

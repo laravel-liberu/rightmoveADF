@@ -27,8 +27,5 @@ class PropertyPremium implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'agent_ref' => array('type' => 'string', 'required' => true, 'max' => 80),
-		'premium_listing' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\PremiumListing', 'required' => true)
-	);
+	protected $arrSynthesize = ['agent_ref' => ['type' => 'string', 'required' => true, 'max' => 80], 'premium_listing' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\PremiumListing::class, 'required' => true]];
 }

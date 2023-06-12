@@ -12,16 +12,8 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Featured Property Types Enum Class
-*
-*	Class for the different Featured Property Types.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class FeaturedPropertyTypes extends ValuesBase {
-
-	const Subscription = 1;
-	const FeaturedPropertyOfTheWeek = 2;
+enum FeaturedPropertyTypes : int
+{
+    case Subscription = 1;
+    case FeaturedPropertyOfTheWeek = 2;
 }

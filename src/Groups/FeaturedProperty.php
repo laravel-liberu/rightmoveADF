@@ -26,7 +26,5 @@ class FeaturedProperty implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'featured_property_type' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\FeaturedPropertyTypes', 'required' => true)
-	);
+	protected $arrSynthesize = ['featured_property_type' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\FeaturedPropertyTypes::class, 'required' => true]];
 }

@@ -12,22 +12,14 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Outside Spaces Enum Class
-*
-*	Class for the different outside spaces.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class OutsideSpaces extends ValuesBase {
-
-	const BackGarden = 29;
-	const CommunalGarden = 30;
-	const EnclosedGarden = 31;
-	const FrontGarden = 32;
-	const PrivateGarden = 33;
-	const RearGarden = 34;
-	const Terrace = 35;
-	const Patio = 36;
+enum OutsideSpaces : int
+{
+    case BackGarden = 29;
+    case CommunalGarden = 30;
+    case EnclosedGarden = 31;
+    case FrontGarden = 32;
+    case PrivateGarden = 33;
+    case RearGarden = 34;
+    case Terrace = 35;
+    case Patio = 36;
 }

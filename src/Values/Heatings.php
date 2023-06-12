@@ -12,26 +12,18 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Heatings Enum Class
-*
-*	Class for the different Heating options.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class Heatings extends ValuesBase {
-
-	const AirConditioning = 1;
-	const Central = 2;
-	const DoubleGlazing = 3;
-	const EcoFriendly = 4;
-	const Electric = 5;
-	const Gas = 6;
-	const GasCentral = 7;
-	const NightStorage = 8;
-	const Oil = 9;
-	const Solar = 10;
-	const SolarWater = 11;
-	const UnderFloor = 12;
+enum Heatings : int
+{
+    case AirConditioning = 1;
+    case Central = 2;
+    case DoubleGlazing = 3;
+    case EcoFriendly = 4;
+    case Electric = 5;
+    case Gas = 6;
+    case GasCentral = 7;
+    case NightStorage = 8;
+    case Oil = 9;
+    case Solar = 10;
+    case SolarWater = 11;
+    case UnderFloor = 12;
 }

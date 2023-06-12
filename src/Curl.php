@@ -44,10 +44,10 @@ class Curl {
 		curl_setopt($resCurl, CURLOPT_SSLCERTTYPE, 'PEM');
 		curl_setopt($resCurl, CURLOPT_SSLCERTPASSWD, $strCertPass);
 		curl_setopt($resCurl, CURLOPT_POST, 1);
-		curl_setopt($resCurl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+		curl_setopt($resCurl, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 		curl_setopt($resCurl, CURLOPT_POSTFIELDS, $strJSON);
 		$strResponse = curl_exec($resCurl);
 
-		return json_decode($strResponse);
+		return json_decode($strResponse, null, 512, JSON_THROW_ON_ERROR);
 	}
 }

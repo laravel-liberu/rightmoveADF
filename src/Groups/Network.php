@@ -25,7 +25,5 @@ class Network implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'network_id' => array('type' => 'int', 'required' => true)
-	);
+	protected $arrSynthesize = ['network_id' => ['type' => 'int', 'required' => true]];
 }

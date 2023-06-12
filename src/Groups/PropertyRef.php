@@ -25,7 +25,5 @@ class PropertyRef implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'agent_ref' => array('type' => 'string', 'required' => true, 'max' => 80)
-	);
+	protected $arrSynthesize = ['agent_ref' => ['type' => 'string', 'required' => true, 'max' => 80]];
 }

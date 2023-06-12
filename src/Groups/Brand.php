@@ -25,7 +25,5 @@ class Brand implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'brand_id' => array('type' => 'int', 'required' => true)
-	);
+	protected $arrSynthesize = ['brand_id' => ['type' => 'int', 'required' => true]];
 }

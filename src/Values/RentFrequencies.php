@@ -12,19 +12,11 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Rent Frequencies Enum Class
-*
-*	Class for the different rent frequencies.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class RentFrequencies extends ValuesBase {
-
-	const Yearly = 1;
-	const Quarterly = 4;
-	const Monthly = 12;
-	const Weekly = 52;
-	const Daily = 365;
+enum RentFrequencies : int
+{
+    case Yearly = 1;
+    case Quarterly = 4;
+    case Monthly = 12;
+    case Weekly = 52;
+    case Daily = 365;
 }

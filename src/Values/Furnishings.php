@@ -12,18 +12,10 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Furnishings Enum Class
-*
-*	Class for the different Furnishing options.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class Furnishings extends ValuesBase {
-
-	const Furnished = 0;
-	const PartFurnished = 1;
-	const Unfurnished = 2;
-	const FurnishedUnfurnished = 4;
+enum Furnishings : int
+{
+    case Furnished = 0;
+    case PartFurnished = 1;
+    case Unfurnished = 2;
+    case FurnishedUnfurnished = 4;
 }

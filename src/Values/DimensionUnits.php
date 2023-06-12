@@ -12,19 +12,11 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Dimension Units Enum Class
-*
-*	Class for the different dimension units.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class DimensionUnits extends ValuesBase {
-
-    const Metres =  5;
-    const Centimetres = 6;
-    const Millimetres = 7;
-    const Feet = 8;
-    const Inches = 9;
+enum DimensionUnits : int
+{
+    case Metres = 5;
+    case Centimetres = 6;
+    case Millimetres = 7;
+    case Feet = 8;
+    case Inches = 9;
 }

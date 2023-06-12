@@ -38,9 +38,5 @@ class RemoveProperty extends RequestBase {
 	/**
 	*	@var array $arrSynthesize The synthesize array.
 	*/
-	protected $arrSynthesize = array(
-		'network' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\Network', 'required' => true),
-		'branch' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\Branch', 'required' => true),
-		'property' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\PropertyRemove', 'required' => true)
-	);
+	protected $arrSynthesize = ['network' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\Network::class, 'required' => true], 'branch' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\Branch::class, 'required' => true], 'property' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\PropertyRemove::class, 'required' => true]];
 }

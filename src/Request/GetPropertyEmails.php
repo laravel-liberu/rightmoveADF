@@ -39,10 +39,5 @@ class GetPropertyEmails extends RequestBase {
 	/**
 	*	@var array $arrSynthesize The synthesize array.
 	*/
-	protected $arrSynthesize = array(
-		'network' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\Network', 'required' => true),
-		'branch' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\Branch', 'required' => true),
-		'property' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\PropertyRef', 'required' => true),
-		'export_period' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\ExportPeriodTime', 'required' => true)
-	);
+	protected $arrSynthesize = ['network' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\Network::class, 'required' => true], 'branch' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\Branch::class, 'required' => true], 'property' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\PropertyRef::class, 'required' => true], 'export_period' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\ExportPeriodTime::class, 'required' => true]];
 }

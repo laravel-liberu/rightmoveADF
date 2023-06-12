@@ -26,9 +26,5 @@ class Branch implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'branch_id' => array('type' => 'int', 'required' => true),
-		'channel' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\Channels', 'required' => true),
-		'overseas' => array('type' => 'boolean')
-	);
+	protected $arrSynthesize = ['branch_id' => ['type' => 'int', 'required' => true], 'channel' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\Channels::class, 'required' => true], 'overseas' => ['type' => 'boolean']];
 }

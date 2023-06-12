@@ -12,20 +12,12 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Accessibilites Enum Class
-*
-*	Class for the different Accessibility options.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class Accessibilites extends ValuesBase {
-
-	const NotSuitableForWheelchairUsers = 42;
-	const LevelAccess = 37;
-	const LiftAccess = 38;
-	const RampedAccess = 39;
-	const WetRoom = 40;
-	const WideDoorways = 41;
+enum Accessibilites : int
+{
+    case NotSuitableForWheelchairUsers = 42;
+    case LevelAccess = 37;
+    case LiftAccess = 38;
+    case RampedAccess = 39;
+    case WetRoom = 40;
+    case WideDoorways = 41;
 }

@@ -25,9 +25,5 @@ class Principal implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'principal_email_address' => array('type' => 'string', 'required' => true, 'max' => 200),
-		'auto_email_when_live' => array('type' => 'boolean'),
-		'auto_email_updates' => array('type' => 'boolean')
-	);
+	protected $arrSynthesize = ['principal_email_address' => ['type' => 'string', 'required' => true, 'max' => 200], 'auto_email_when_live' => ['type' => 'boolean'], 'auto_email_updates' => ['type' => 'boolean']];
 }

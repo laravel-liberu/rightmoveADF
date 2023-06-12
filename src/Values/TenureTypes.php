@@ -12,19 +12,11 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Tenure Types Enum Class
-*
-*	Class for the different tenure types.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class TenureTypes extends ValuesBase {
-
-	const Freehold = 1;
-	const Leasehold = 2;
-	const Feudal = 3;
-	const Commonhold = 4;
-	const ShareOfFreehold = 5;
+enum TenureTypes : int
+{
+    case Freehold = 1;
+    case Leasehold = 2;
+    case Feudal = 3;
+    case Commonhold = 4;
+    case ShareOfFreehold = 5;
 }

@@ -12,20 +12,12 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Entrance Floors Enum Class
-*
-*	Class for the different entrance floors.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class EntranceFloors extends ValuesBase {
-
-	const Basement = 1;
-	const GroundFloor = 2;
-	const FirstFloor = 3;
-	const SecondFloor = 4;
-	const HigherThan2ndFloorNoLift = 5;
-	const HigherThan2ndFloorWithLift = 6;
+enum EntranceFloors : int
+{
+    case Basement = 1;
+    case GroundFloor = 2;
+    case FirstFloor = 3;
+    case SecondFloor = 4;
+    case HigherThan2ndFloorNoLift = 5;
+    case HigherThan2ndFloorWithLift = 6;
 }

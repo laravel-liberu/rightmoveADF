@@ -26,11 +26,5 @@ class Media implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'media_type' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\MediaTypes', 'required' => true),
-		'media_url' => array('type' => 'string', 'required' => true, 'max' => 250),
-		'caption' => array('type' => 'string', 'max' => 50),
-		'sort_order' => array('type' => 'int', 'min' => 0),
-		'media_update_date' => array('type' => 'datetime', 'format' => 'd-m-Y G:i:s', 'autoinit' => false)
-	);
+	protected $arrSynthesize = ['media_type' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\MediaTypes::class, 'required' => true], 'media_url' => ['type' => 'string', 'required' => true, 'max' => 250], 'caption' => ['type' => 'string', 'max' => 50], 'sort_order' => ['type' => 'int', 'min' => 0], 'media_update_date' => ['type' => 'datetime', 'format' => 'd-m-Y G:i:s', 'autoinit' => false]];
 }

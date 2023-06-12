@@ -12,18 +12,10 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Conditions Enum Class
-*
-*	Class for the different Conditions.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class Conditions extends ValuesBase {
-
-	const Good = 1;
-	const SomeWorkNeeded = 2;
-	const WorkRequiredThroughout = 3;
-	const MajorRenovationRequired = 4;
+enum Conditions : int
+{
+    case Good = 1;
+    case SomeWorkNeeded = 2;
+    case WorkRequiredThroughout = 3;
+    case MajorRenovationRequired = 4;
 }

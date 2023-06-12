@@ -12,16 +12,8 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Display Types Enum Class
-*
-*	Class for the different Display Types.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class DisplayTypes extends ValuesBase {
-
-	const OneLargeTwoSmall = 1;
-	const OneLargeImage = 2;
+enum DisplayTypes : int
+{
+    case OneLargeTwoSmall = 1;
+    case OneLargeImage = 2;
 }

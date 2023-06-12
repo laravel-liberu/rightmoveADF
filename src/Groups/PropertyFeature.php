@@ -26,8 +26,5 @@ class PropertyFeature implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'agent_ref' => array('type' => 'string', 'required' => true, 'max' => 80),
-		'featured_property' => array('type' => 'object', 'class' => 'Frozensheep\RightmoveADF\Groups\FeaturedProperty', 'required' => true)
-	);
+	protected $arrSynthesize = ['agent_ref' => ['type' => 'string', 'required' => true, 'max' => 80], 'featured_property' => ['type' => 'object', 'class' => \Frozensheep\RightmoveADF\Groups\FeaturedProperty::class, 'required' => true]];
 }

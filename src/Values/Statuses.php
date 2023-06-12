@@ -12,20 +12,12 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Statuses Enum Class
-*
-*	Class for the different statuses.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class Statuses extends ValuesBase {
-
-	const Available = 1;
-	const SSTC = 2;
-	const SSTCM = 3;
-	const UnderOffer = 4;
-	const Reserved = 5;
-	const LetAgreed = 6;
+enum Statuses : int
+{
+    case Available = 1;
+    case SSTC = 2;
+    case SSTCM = 3;
+    case UnderOffer = 4;
+    case Reserved = 5;
+    case LetAgreed = 6;
 }

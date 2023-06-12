@@ -25,8 +25,5 @@ class ExportPeriod implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'start_date' => array('type' => 'datetime', 'format' => 'd-m-Y', 'required' => true),
-		'end_date' => array('type' => 'datetime', 'format' => 'd-m-Y', 'required' => true)
-	);
+	protected $arrSynthesize = ['start_date' => ['type' => 'datetime', 'format' => 'd-m-Y', 'required' => true], 'end_date' => ['type' => 'datetime', 'format' => 'd-m-Y', 'required' => true]];
 }

@@ -12,21 +12,13 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Media Types Enum Class
-*
-*	Class for the different media types.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class MediaTypes extends ValuesBase {
-
-	const Image = 1;
-	const Floorplan = 2;
-	const Brochure = 3;
-	const VirtualTour = 4;
-	const AudioTour = 5	;
-	const EPC = 6;
-	const EPCGraph = 7;
+enum MediaTypes : int
+{
+    case Image = 1;
+    case Floorplan = 2;
+    case Brochure = 3;
+    case VirtualTour = 4;
+    case AudioTour = 5;
+    case EPC = 6;
+    case EPCGraph = 7;
 }

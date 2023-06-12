@@ -28,16 +28,5 @@ class Price implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'price' => array('type' => 'number', 'required' => true, 'min' => 1),
-		'price_qualifier' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\PriceQualifiers'),
-		'deposit' => array('type' => 'number'),
-		'administration_fee' => array('type' => 'string', 'max' => 4000),
-		'rent_frequency' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\RentFrequencies'),
-		'tenure_type' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\TenureTypes'),
-		'auction' => array('type' => 'boolean'),
-		'tenure_unexpired_years' => array('type' => 'int'),
-		'price_per_unit_area' => array('type' => 'number'),
-		'price_per_unit_per_annum' => array('type' => 'number')
-	);
+	protected $arrSynthesize = ['price' => ['type' => 'number', 'required' => true, 'min' => 1], 'price_qualifier' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\PriceQualifiers::class], 'deposit' => ['type' => 'number'], 'administration_fee' => ['type' => 'string', 'max' => 4000], 'rent_frequency' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\RentFrequencies::class], 'tenure_type' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\TenureTypes::class], 'auction' => ['type' => 'boolean'], 'tenure_unexpired_years' => ['type' => 'int'], 'price_per_unit_area' => ['type' => 'number'], 'price_per_unit_per_annum' => ['type' => 'number']];
 }

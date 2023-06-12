@@ -27,11 +27,5 @@ class PremiumListing implements GroupInterface, \JsonSerializable {
 
 	use Synthesizer;
 
-	protected $arrSynthesize = array(
-		'display_type' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\DisplayTypes', 'required' => true),
-		'resale_stamp_text' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\StampTexts'),
-		'lettings_stamp_text' => array('type' => 'enum', 'class' => 'Frozensheep\RightmoveADF\Values\StampTexts'),
-		'web_flag' => array('type' => 'boolean', 'default' => false, 'required' => true),
-		'mobile_flag' => array('type' => 'boolean', 'default' => false, 'required' => true)
-	);
+	protected $arrSynthesize = ['display_type' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\DisplayTypes::class, 'required' => true], 'resale_stamp_text' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\StampTexts::class], 'lettings_stamp_text' => ['type' => 'enum', 'class' => \Frozensheep\RightmoveADF\Values\StampTexts::class], 'web_flag' => ['type' => 'boolean', 'default' => false, 'required' => true], 'mobile_flag' => ['type' => 'boolean', 'default' => false, 'required' => true]];
 }

@@ -12,18 +12,10 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Area Units Enum Class
-*
-*	Class for the different area units.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class AreaUnits extends ValuesBase {
-
-	const SqFt = 1;
-	const SqM = 2;
-	const Acre = 3;
-	const Hectares = 4;
+enum AreaUnits : int
+{
+    case SqFt = 1;
+    case SqM = 2;
+    case Acre = 3;
+    case Hectares = 4;
 }

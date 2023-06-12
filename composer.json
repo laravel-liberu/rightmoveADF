@@ -26,5 +26,8 @@
 		"psr-4": {
 			"Frozensheep\\RightmoveADF\\Tests\\": "tests"
 		}
+	},
+	"require-dev": {
+		"rector/rector": "^0.17.0"
 	}
 }

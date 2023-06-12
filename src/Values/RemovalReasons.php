@@ -12,20 +12,12 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Removal Reasons Enum Class
-*
-*	Class for the different removal reasons.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class RemovalReasons extends ValuesBase {
-
-	const SoldByUs = 7;
-	const SoldByAnotherAgent = 8;
-	const WithdrawnFromMarket = 9;
-	const LostInstruction = 10;
-	const Removed = 11;
-	const LetByUs = 12;
+enum RemovalReasons : int
+{
+    case SoldByUs = 7;
+    case SoldByAnotherAgent = 8;
+    case WithdrawnFromMarket = 9;
+    case LostInstruction = 10;
+    case Removed = 11;
+    case LetByUs = 12;
 }

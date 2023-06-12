@@ -12,67 +12,59 @@ namespace Frozensheep\RightmoveADF\Values;
 
 use Frozensheep\RightmoveADF\Values\ValuesBase;
 
-/**
-*	Stamp Texts Enum Class
-*
-*	Class for the different Stamp Text options.
-*
-*	@package	Frozensheep\RightmoveADF
-*
-*/
-class StampTexts extends ValuesBase {
-
-	const Auction = 1;
-	const AvailableSoon = 2;
-	const StampDutyPaid = 4;
-	const ShortLet = 5;
-	const Furnished = 6;
-	const LongLet = 7;
-	const OpenHouse = 8;
-	const Incentive = 9;
-	const NoChain = 10;
-	const PartExchange = 11;
-	const NewListing = 12;
-	const FixedPrice = 13;
-	const PremiumListing = 14;
-	const OpenToOffers = 15;
-	const NewPrice = 16;
-	const NoStampDuty	= 17;
-	const SeaView = 19;
-	const PublicNotice = 20;
-	const Unfurnished = 21;
-	const ViewingAdvised = 22;
-	const WithLand = 23;
-	const AttentionInvestors = 24;
-	const StarBuy = 25;
-	const NoSticker = 26;
-	const Waterside = 27;
-	const GenerousGarden = 28;
-	const RecentlyRenovated = 29;
-	const StunningViews = 30;
-	const Smallholding = 31;
-	const OpenDay = 32;
-	const DoubleGarage = 33;
-	const Annexe = 34;
-	const MediaTour = 35;
-	const BestBid = 36;
-	const InformalTender = 37;
-	const ForStudents = 59;
-	const PetsConsidered = 60;
-	const AvailableNow = 61;
-	const SafeMoveProperty = 64;
-	const AudioTour = 65;
-	const VideoTour = 66;
-	const ListedBuilding = 71;
-	const PeriodProperty = 72;
-	const Retirement = 73;
-	const Equestrian = 74;
-	const Conversion = 75;
-	const Extended = 76;
-	const Parking = 77;
-	const ConfidentialRegister = 78;
-	const BuyToLet = 79;
-	const OutBuildings = 80;
-	const FullyManaged = 85;
-	const MoveByChristmas = 86;
+enum StampTexts : int
+{
+    case Auction = 1;
+    case AvailableSoon = 2;
+    case StampDutyPaid = 4;
+    case ShortLet = 5;
+    case Furnished = 6;
+    case LongLet = 7;
+    case OpenHouse = 8;
+    case Incentive = 9;
+    case NoChain = 10;
+    case PartExchange = 11;
+    case NewListing = 12;
+    case FixedPrice = 13;
+    case PremiumListing = 14;
+    case OpenToOffers = 15;
+    case NewPrice = 16;
+    case NoStampDuty = 17;
+    case SeaView = 19;
+    case PublicNotice = 20;
+    case Unfurnished = 21;
+    case ViewingAdvised = 22;
+    case WithLand = 23;
+    case AttentionInvestors = 24;
+    case StarBuy = 25;
+    case NoSticker = 26;
+    case Waterside = 27;
+    case GenerousGarden = 28;
+    case RecentlyRenovated = 29;
+    case StunningViews = 30;
+    case Smallholding = 31;
+    case OpenDay = 32;
+    case DoubleGarage = 33;
+    case Annexe = 34;
+    case MediaTour = 35;
+    case BestBid = 36;
+    case InformalTender = 37;
+    case ForStudents = 59;
+    case PetsConsidered = 60;
+    case AvailableNow = 61;
+    case SafeMoveProperty = 64;
+    case AudioTour = 65;
+    case VideoTour = 66;
+    case ListedBuilding = 71;
+    case PeriodProperty = 72;
+    case Retirement = 73;
+    case Equestrian = 74;
+    case Conversion = 75;
+    case Extended = 76;
+    case Parking = 77;
+    case ConfidentialRegister = 78;
+    case BuyToLet = 79;
+    case OutBuildings = 80;
+    case FullyManaged = 85;
+    case MoveByChristmas = 86;
 }

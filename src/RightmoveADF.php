@@ -39,32 +39,28 @@ class RightmoveADF {
 
 	use Synthesizer;
 
-	const TEST = 0;
-	const LIVE = 1;
-	const DEBUG = 1;
+	final public const TEST = 0;
+	final public const LIVE = 1;
+	final public const DEBUG = 1;
 
-	const SendProperty = 1;
-	const RemoveProperty = 2;
-	const GetBranchPropertyList = 3;
-	const AddPremiumListing = 4;
-	const AddFeaturedProperty = 5;
-	const RemoveFeaturedProperty = 6;
-	const GetPropertyPerformance = 7;
-	const GetBranchPerformance = 8;
-	const GetBrandEmails = 9;
-	const GetBranchEmails = 10;
-	const GetBrandPhoneLeads = 11;
-	const GetBranchPhoneLeads = 12;
-	const GetPropertyEmails = 13;
+	final public const SendProperty = 1;
+	final public const RemoveProperty = 2;
+	final public const GetBranchPropertyList = 3;
+	final public const AddPremiumListing = 4;
+	final public const AddFeaturedProperty = 5;
+	final public const RemoveFeaturedProperty = 6;
+	final public const GetPropertyPerformance = 7;
+	final public const GetBranchPerformance = 8;
+	final public const GetBrandEmails = 9;
+	final public const GetBranchEmails = 10;
+	final public const GetBrandPhoneLeads = 11;
+	final public const GetBranchPhoneLeads = 12;
+	final public const GetPropertyEmails = 13;
 
 	/**
 	*	@var array $arrSynthesize The synthesize array.
 	*/
-	protected $arrSynthesize = array(
-		'cert_file' => array('type' => 'string'),
-		'cert_pass' => array('type' => 'string'),
-		'environment' => array('type' => 'int', 'min' => 0, 'max' => 1, 'default' => RightmoveADF::TEST)
-	);
+	protected $arrSynthesize = ['cert_file' => ['type' => 'string'], 'cert_pass' => ['type' => 'string'], 'environment' => ['type' => 'int', 'min' => 0, 'max' => 1, 'default' => RightmoveADF::TEST]];
 
 	/**
 	*	Class Constructor
@@ -89,50 +85,22 @@ class RightmoveADF {
 	*	@return object
 	*/
 	public static function createRequest($numRequestType){
-		switch($numRequestType){
-			case RightmoveADF::SendProperty:
-				return new SendProperty();
-				break;
-			case RightmoveADF::RemoveProperty:
-				return new RemoveProperty();
-				break;
-			case RightmoveADF::GetBranchPropertyList:
-				return new GetBranchPropertyList();
-				break;
-			case RightmoveADF::AddPremiumListing:
-				return new AddPremiumListing();
-				break;
-			case RightmoveADF::AddFeaturedProperty:
-				return new AddFeaturedProperty();
-				break;
-			case RightmoveADF::RemoveFeaturedProperty:
-				return new RemoveFeaturedProperty();
-				break;
-			case RightmoveADF::GetPropertyPerformance:
-				return new GetPropertyPerformance();
-				break;
-			case RightmoveADF::GetBranchPerformance:
-				return new GetBranchPerformance();
-				break;
-			case RightmoveADF::GetBrandEmails:
-				return new GetBrandEmails();
-				break;
-			case RightmoveADF::GetBranchEmails:
-				return new GetBranchEmails();
-				break;
-			case RightmoveADF::GetBrandPhoneLeads:
-				return new GetBrandPhoneLeads();
-				break;
-			case RightmoveADF::GetBranchPhoneLeads:
-				return new GetBranchPhoneLeads();
-				break;
-			case RightmoveADF::GetPropertyEmails:
-				return new GetPropertyEmails();
-				break;
-			default:
-				throw new UnknownRequestTypeException();
-				break;
-		}
+		return match ($numRequestType) {
+      RightmoveADF::SendProperty => new SendProperty(),
+      RightmoveADF::RemoveProperty => new RemoveProperty(),
+      RightmoveADF::GetBranchPropertyList => new GetBranchPropertyList(),
+      RightmoveADF::AddPremiumListing => new AddPremiumListing(),
+      RightmoveADF::AddFeaturedProperty => new AddFeaturedProperty(),
+      RightmoveADF::RemoveFeaturedProperty => new RemoveFeaturedProperty(),
+      RightmoveADF::GetPropertyPerformance => new GetPropertyPerformance(),
+      RightmoveADF::GetBranchPerformance => new GetBranchPerformance(),
+      RightmoveADF::GetBrandEmails => new GetBrandEmails(),
+      RightmoveADF::GetBranchEmails => new GetBranchEmails(),
+      RightmoveADF::GetBrandPhoneLeads => new GetBrandPhoneLeads(),
+      RightmoveADF::GetBranchPhoneLeads => new GetBranchPhoneLeads(),
+      RightmoveADF::GetPropertyEmails => new GetPropertyEmails(),
+      default => throw new UnknownRequestTypeException(),
+  };
 	}
 
 	/**
@@ -143,8 +111,8 @@ class RightmoveADF {
 	*	@return object
 	*/
 	public function send($objRequest, $strURLOverride = '', $boolDebug = false){
-		$strURL = ($strURLOverride) ? $strURLOverride : $objRequest->getURL($this->environment);
+		$strURL = $strURLOverride ?: $objRequest->getURL($this->environment);
 
-		return Curl::send(json_encode($objRequest), $strURL, $this->cert_file, $this->cert_pass, $boolDebug);
+		return Curl::send(json_encode($objRequest, JSON_THROW_ON_ERROR), $strURL, $this->cert_file, $this->cert_pass, $boolDebug);
 	}
 }
